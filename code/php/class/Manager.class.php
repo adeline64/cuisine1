@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Adeline
- * Date: 28/02/2019
- * Time: 22:55
- */
+
 
 class Manager {
 

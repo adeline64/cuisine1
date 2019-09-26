@@ -115,6 +115,20 @@ CREATE TABLE `boisson` (
   `description` TEXT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+DROP TABLE IF EXISTS `vin`;
+CREATE TABLE `vin` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(100) NOT NULL,
+  `description` TEXT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `contact`;
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `message` TEXT NOT NULL,
+  `utilisateur` int(11) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Index pour les tables exportées
 --
@@ -171,6 +185,12 @@ ALTER TABLE `dessert`
   -- Index pour la table `boisson`
 --
 ALTER TABLE `boisson`
+  ADD PRIMARY KEY (`id`);
+
+  ALTER TABLE `vin`
+  ADD PRIMARY KEY (`id`);
+
+    ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -235,3 +255,8 @@ ALTER TABLE `dessert`
 ALTER TABLE `boisson`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+ALTER TABLE `vin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+  ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

@@ -1,7 +1,35 @@
+<?php
+if (!empty($_SESSION['utilisateur'])) {
+
+    $utilisateur=$_SESSION['utilisateur'];
+
+    if ( ! empty( $_POST ) ) {
+
+        if ( ! isset(
+            $_POST['dateheure'],
+            $_POST['nbPersonne']
+            ) )
+        {
+            echo "il manque une ou plusieurs donnees";
+            
+
+        } else {
+            $managerReservation = new ManagerReservation();
+            $managerReservation->setDb( $db );
+            $reservation = $managerReservation->add( $_POST);
+            $reservation->setUtilisateur($utilisateur->getId());
+            $managerReservation->update($reservation);
+
+        }
+    }
+    /*
+	 * Nous sommes dans le cas d'un utilsateur connect�
+	 */
+    ?>
 
 <div class="jumbotron jumbotron-sm">
     <div class="container">
-        <div class="row">
+        <div class="row reser">
             <div class="col-sm-12 col-lg-12">
                 <h1 class="h1">
                     Reserve chez nous ! <small>Gardons le contact</small></h1>
@@ -9,22 +37,23 @@
         </div>
     </div>
 </div>
-<div class="container">
+        <a href="?page=mesreservations" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Mes reservations</a><br>
+                    
     <div class="row">
         <div class="col-md-8">
-            <div class="well well-sm">
-                <form>
+            <div class="well well-sm"><br>
+                <form action="?page=reservation" method="post">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="nom">
                                 Nom</label>
-                            <input type="text" class="form-control" id="nom" placeholder="Votre nom" required="required" />
+                            <input type="text" class="form-control" name="nom" id="nom" placeholder="Votre nom" autofocus required/>
                         </div>
                         <div class="form-group">
                             <label for="prenom">
                                 Prenom</label>
-                            <input type="text" class="form-control" id="prenom" placeholder="Votre prenom" required="required" />
+                            <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Votre prenom" required/>
                         </div>
                         <div class="form-group">
                             <label for="email">
@@ -32,7 +61,23 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                 </span>
-                                <input type="email" class="form-control" id="email" placeholder="votre email" required="required" /></div>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="votre email" required /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">
+                                Téléphone </label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="telephone" class="form-control" name="telephone" id="telephone" placeholder="votre n°telephone" required /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="adresse">
+                                Adresse </label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="adresse" class="form-control" name="adresse" id="adresse" placeholder="votre Adresse" required/></div>
                         </div>
                         <div class="form-group">
                             <label for="date">
@@ -40,7 +85,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                 </span>
-                                <input type="date" class="form-control" id="date" placeholder="Date de réservation" required="required" /></div>
+                                <input type="date" class="form-control" name="dateheure" id="dateheure" placeholder="Date de réservation" required/></div>
                         </div>
                         <div class="form-group">
                             <label for="nbPersonne">
@@ -48,33 +93,37 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                 </span>
-                                <input type="nbPersonne" class="form-control" id="nbPersonne" placeholder="nbPersonne" required="required" /></div>
+                                <input type="nbPersonne" class="form-control" name="nbPersonne" id="nbPersonne" placeholder="nbPersonne" required/></div>
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-                            Envoyer</button>
-                    </div>
+                        <input type="submit" name="Reserver" id="button" class="btn_reservation" value="Reserver">
+                    </div><br>
                 </div>
                 </form>
             </div>
         </div>
-        <div class="col-md-4">
-            <form>
-            <legend><span class="glyphicon glyphicon-globe"></span> Notre restaurant</legend>
-            <address>
-                <strong>La Fabrique du petit mangé</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
-                <abbr title="telephone">
-                    Telephone:</abbr>
-                    0559876545
-            </address>
-            <address>
-                <strong>Notre email</strong><br>
-                <a href="mailto:#">first.last@example.com</a>
-            </address>
-            </form>
-        </div>
-    </div>
-</div>
+    </div><br>
+
+<p>
+    Une question ? Parlez en ici : <a href="?page=minichat">avec notre équipe</a>
+</p>
+
+
+<?php
+
+}else{
+
+    ?>
+
+<p>
+    Merci de vous connecter pour pouvoir effectuer une réservation. <br>
+</p>
+
+<p>
+    Pour vous connecter, rendez vous ici : <a href="?page=connexion">Connexion</a>
+</p>
+
+<?php
+
+}

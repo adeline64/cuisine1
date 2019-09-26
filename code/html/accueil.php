@@ -1,5 +1,5 @@
 <div class="row align-items-start">
-    <div class="col-12 col-md-12 accueil">
+    <div class="col-12 col-md-12 ">
 
         <h2 class="Bienvenue">
 

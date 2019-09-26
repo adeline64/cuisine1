@@ -1,35 +1,36 @@
-var validation = document.getElementById('button');
+let validation = document.getElementById('button');
 
-var nom = document.getElementById('nom');
-var nom_m = document.getElementById('nom_manquant');
-var nom_v = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?/;
+let nom = document.getElementById('nom');
+let nom_m = document.getElementById('nom_manquant');
+let nom_v = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?/;
 
-var prenom = document.getElementById('prenom');
-var prenom_m = document.getElementById('prenom_manquant');
-var prenom_v = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?/;
+let prenom = document.getElementById('prenom');
+let prenom_m = document.getElementById('prenom_manquant');
+let prenom_v = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?/;
 
-var adresse = document.getElementById('adresse');
-var adresse_m = document.getElementById('adresse_manquant');
+let adresse = document.getElementById('adresse');
+let adresse_m = document.getElementById('adresse_manquant');
 
-var code = document.getElementById('codepostal');
-var code_m = document.getElementById('code_manquant');
+let code = document.getElementById('codepostal');
+let code_m = document.getElementById('code_manquant');
 
-var ville = document.getElementById('ville');
-var ville_m = document.getElementById('ville_manquant');
-var ville_v = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?/;
+let email = document.getElementById('email');
+let email_m = document.getElementById('email_manquant');
+let email_regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
 
-var pays = document.getElementById('pays');
-var pays_m = document.getElementById('Pays_manquant');
+let password = document.getElementById('password');
+let password_m = document.getElementById('password_manquant');
 
-var email = document.getElementById('email');
-var email_m = document.getElementById('email_manquant');
-var email_regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+let telephone = document.getElementById('telephone');
+let telephone_m = document.getElementById('telephone_manquant');
 
-var password = document.getElementById('password');
-var password_m = document.getElementById('password_manquant');
+let ville = document.getElementById('ville');
+let ville_m = document.getElementById('ville_manquant');
+let ville_v = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?/;
 
-var telephone = document.getElementById('tel');
-var telephone_m = document.getElementById('telephone_manquant');
+let date = document.getElementById('date');
+let date_m = document.getElementById('date_manquant');
+
 
 validation.addEventListener('click',f_valid);
 
@@ -63,29 +64,6 @@ function f_valid(e) {
         adresse_m.style.color = 'red';
     }
 
-    if (code.validity.valueMissing) {
-        e.preventDefault();
-        code_m.textContent = 'code manquant';
-        code_m.style.color = 'red';
-    }
-
-    if (ville.validity.valueMissing) {
-        e.preventDefault();
-        ville_m.textContent = 'ville manquant';
-        ville_m.style.color = 'red';
-    } else if (ville_v.test(ville.value) == false) {
-        event.preventDefault();
-        ville_m.textContent = 'Format incorect';
-        ville_m.style.color = 'orange';
-    } else {
-    }
-
-    if (pays.validity.valueMissing) {
-        e.preventDefault();
-        pays_m.textContent = 'pays manquant';
-        pays_m.style.color = 'red';
-    }
-
     if (email.validity.valueMissing) {
         e.preventDefault();
         email_m.textContent = 'email manquant';
@@ -103,9 +81,37 @@ function f_valid(e) {
         password_m.style.color = 'red';
     }
 
+    if (code.validity.valueMissing) {
+        e.preventDefault();
+        code_m.textContent = 'code manquant';
+        code_m.style.color = 'red';
+    }
+
+    if (ville.validity.valueMissing) {
+        e.preventDefault();
+        ville_m.textContent = 'ville manquant';
+        ville_m.style.color = 'red';
+    } else if (ville_v.test(ville.value) == false) {
+        event.preventDefault();
+        ville_m.textContent = 'Format incorect';
+        ville_m.style.color = 'orange';
+    } else {
+    }
+
     if (telephone.validity.valueMissing) {
         e.preventDefault();
         telephone_m.textContent = 'telephone manquant';
         telephone_m.style.color = 'red';
     }
+
+    if (date.validity.valueMissing) {
+        e.preventDefault();
+        date_m.textContent = 'date manquant';
+        date_m.style.color = 'red';
+    }
+
+    
+
+
 }
+
