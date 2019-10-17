@@ -1,21 +1,32 @@
-/*Barre de navigation*/
+/*Navbarre*/
 
-.NavBarre{
-    background-color: cornflowerblue;    
+.OwlBook_NavBarre{
+    background-color: purple;
+    border-color: white;
     width: 100%;
+    display: block;
 }
 
+.navbar-toggler{
+    background-color: plum;
+    color: lightyellow;
+}
 
-/*Accueil*/
+.navbar-toggler-icon{
+    background-color: plum;
+}
 
+.navbar-nav{
+    background-color: plum;
+}
 
 .Bienvenue{
-text-align: center;
-margin-top: 25px;
+    text-align: center;
+    margin-top: 25px;
 }
 
 .texteB{
-margin-top: 15px;
+    margin-top: 15px;
 }
 
 .couple{
@@ -43,13 +54,18 @@ margin-top: 15px;
 }
 
 .accueil{
-   margin-bottom: 170px;
+    margin-bottom: 170px;
 }
 
 /*carte*/
 
+.btn-carte{
+    background-color: purple;
+    color: white;
+}
+
 .manger{
-   margin-top: 54px;
+    margin-top: 54px;
 }
 
 .carte{
@@ -73,8 +89,17 @@ margin-top: 15px;
 
 /*contact et reservation*/
 
+.reser{
+    margin-top: 15px;
+}
+
+.btn-reser{
+    background-color: blueviolet;
+    color: white;
+}
+
 .jumbotron {
-    background: #358CCE;
+    background: rgb(236, 136, 191);
     color: #FFF;
     border-radius: 0px;
 }
@@ -83,11 +108,11 @@ margin-top: 15px;
 
 .jumbotron small {
     color: #FFF;
-    }
+}
 
 .h1 small {
     font-size: 24px;
-    }
+}
 
 /* commentaire */
 
@@ -105,7 +130,7 @@ input:focus{
 
 input[type="button"]{
     font-weight: bold;
-    
+
 }
 
 textarea:focus{
@@ -115,8 +140,8 @@ textarea:focus{
 
 :required {
     border: solid red;
-  }
+}
 
 :required:valid {
-    border: solid green ; 
-    }
+    border: solid green ;
+}

@@ -80,6 +80,8 @@ if (!empty($_SESSION['utilisateur'])) {
 	</div>
 </div>
 
+	
+
 <h1>Commentaire</h1>
 
 	<?php

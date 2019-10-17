@@ -3,7 +3,7 @@
 
         <h2 class="Bienvenue">
 
-            "La Fabrique du petit mangé"
+            La Fabrique du petit mangé
 
         </h2>
 
@@ -18,7 +18,7 @@
 
         <h2 class="Patron">
 
-            Le Mot du Patron
+            Le mot du patron
 
         </h2>
 
@@ -45,7 +45,7 @@
 
         <div class="resto">
 
-            <img src="image/restaurant2.jpg" alt="Photo de la semaine" />
+            <img src="image/restaurant2.jpg" alt="Photo de la semaine""/>
 
         </div>
 
@@ -56,13 +56,8 @@
         </h3>
 
         <p class="jour">
-
-            <ul>
-                <li>
-                    salade de chèvre
-                </li>
-
-            </ul>
+            Salade de chèvre <br>
+            <hr>
 
             Postremo ad id indignitatis est ventum, ut cum peregrini ob formidatam haut ita dudum <br>
             alimentorum inopiam pellerentur ab urbe praecipites, sectatoribus disciplinarum liberalium inpendio <br>
@@ -75,16 +70,13 @@
 
             Plats
 
-        </h3>
+        </h3><br>
 
         <p class="jour">
 
-            <ul>
-                <li>
-                    Hamburger Végétarien et frite maison
-                </li>
+            Hamburger Végétarien et frite maison <br>
 
-            </ul>
+            <hr>
 
             Postremo ad id indignitatis est ventum, ut cum peregrini ob formidatam haut ita dudum <br>
             alimentorum inopiam pellerentur ab urbe praecipites, sectatoribus disciplinarum liberalium inpendio <br>
@@ -97,23 +89,20 @@
 
             Dessert
 
-        </h3>
+        </h3><br>
 
         <p class="jour">
 
-            <ul>
-                <li>
-                    Coupelle de fruit.
-                </li>
-
-            </ul>
+                    Coupelle de fruit. <br>
+                    <hr>
+        
 
             Postremo ad id indignitatis est ventum, ut cum peregrini ob formidatam haut ita dudum <br>
             alimentorum inopiam pellerentur ab urbe praecipites, sectatoribus disciplinarum liberalium inpendio <br>
             paucis sine respiratione ulla extrusis, tenerentur minimarum adseclae veri, quique id simularunt ad tempus, <br>
             et tria milia saltatricum ne interpellata quidem cum choris totidemque remanerent magistris.
 
-        </p>
+        </p><br>
  
     </div>
 </div>

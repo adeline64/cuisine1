@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.5.4.1
--- http://www.phpmyadmin.net
---
--- Client :  localhost
--- Généré le :  Dim 12 Mai 2019 à 14:48
--- Version du serveur :  5.7.11
--- Version de PHP :  5.6.18
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -129,6 +122,13 @@ CREATE TABLE `contact` (
   `utilisateur` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+DROP TABLE IF EXISTS `minichat`;
+CREATE TABLE `minichat` (
+  `id` int(11) NOT NULL,
+  `message` TEXT NOT NULL,
+  `utilisateur` int(11) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Index pour les tables exportées
 --
@@ -192,6 +192,9 @@ ALTER TABLE `boisson`
 
     ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
+
+  ALTER TABLE `minichat`
+  ADD PRIMARY KEY (`id`)
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -259,4 +262,7 @@ ALTER TABLE `vin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
   ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+  ALTER TABLE `minichat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

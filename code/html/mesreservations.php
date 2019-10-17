@@ -10,7 +10,9 @@ if (!empty($_SESSION['utilisateur'])) {
 	 */
     $managerReservation = new ManagerReservation();
     $managerReservation->setDb($db);
-	$reservations = $managerReservation->getAllReservation();
+	$reservations = $managerReservation->getReservation(23);
+
+	var_dump($reservations);
 
 	 ?>
 

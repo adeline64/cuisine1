@@ -32,48 +32,55 @@ if (!empty($_SESSION['utilisateur'])) {
         <div class="row reser">
             <div class="col-sm-12 col-lg-12">
                 <h1 class="h1">
-                    Reserve chez nous ! <small>Gardons le contact</small></h1>
+                    Reserve chez nous ! <small>Gardons le contact</small>
+                </h1>
             </div>
         </div>
     </div>
 </div>
-        <a href="?page=mesreservations" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Mes reservations</a><br>
+
+    <a href="?page=mesreservations" class="btn btn-reser btn-lg active" role="button" aria-pressed="true">Mes reservations</a><br>
                     
-    <div class="row">
-        <div class="col-md-8">
-            <div class="well well-sm"><br>
-                <form action="?page=reservation" method="post">
+<div class="row">
+    <div class="col-md-8">
+        <div class="well well-sm"><br>
+            <form action="?page=reservation" method="post">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="nom">
-                                Nom</label>
+                                Nom
+                            </label>
                             <input type="text" class="form-control" name="nom" id="nom" placeholder="Votre nom" autofocus required/>
                         </div>
                         <div class="form-group">
                             <label for="prenom">
-                                Prenom</label>
+                                Prenom
+                            </label>
                             <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Votre prenom" required/>
                         </div>
                         <div class="form-group">
                             <label for="email">
-                                Email </label>
+                                Email 
+                            </label>
                             <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope">
                                 </span>
                                 <input type="email" class="form-control" name="email" id="email" placeholder="votre email" required /></div>
-                        </div>
+                            </div>
                         <div class="form-group">
                             <label for="telephone">
-                                Téléphone </label>
+                                Téléphone 
+                            </label>
                             <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope">
                                 </span>
                                 <input type="telephone" class="form-control" name="telephone" id="telephone" placeholder="votre n°telephone" required /></div>
                         </div>
                         <div class="form-group">
                             <label for="adresse">
-                                Adresse </label>
+                                Adresse 
+                            </label>
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                 </span>
@@ -81,7 +88,8 @@ if (!empty($_SESSION['utilisateur'])) {
                         </div>
                         <div class="form-group">
                             <label for="date">
-                                Date </label>
+                                Date 
+                            </label>
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                 </span>
@@ -100,10 +108,10 @@ if (!empty($_SESSION['utilisateur'])) {
                         <input type="submit" name="Reserver" id="button" class="btn_reservation" value="Reserver">
                     </div><br>
                 </div>
-                </form>
-            </div>
+            </form>
         </div>
-    </div><br>
+    </div>
+</div><br>
 
 <p>
     Une question ? Parlez en ici : <a href="?page=minichat">avec notre équipe</a>
@@ -116,13 +124,16 @@ if (!empty($_SESSION['utilisateur'])) {
 
     ?>
 
-<p>
-    Merci de vous connecter pour pouvoir effectuer une réservation. <br>
-</p>
+<div class="jumbotron reser">
+  <h1 class="display-4">Cher Client</h1>
+  <p class="lead">Vous êtes déconnectés.</p>
+  <hr class="my-4">
+  <p>Merci de vous connecter pour pouvoir effectuer une réservation.</p>
+  <p class="lead">
+    <a class="btn btn-reser btn-lg" href="?page=connexion" role="button">Connexion</a>
+  </p>
+</div>
 
-<p>
-    Pour vous connecter, rendez vous ici : <a href="?page=connexion">Connexion</a>
-</p>
 
 <?php
 

@@ -1,7 +1,7 @@
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark footer">
 
-  <div style="background-color: #6351ce;">
+  <div style="background-color: purple;">
     <div class="container">
 
       <!-- Grid row-->

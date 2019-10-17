@@ -103,13 +103,16 @@ if (!empty($_SESSION['utilisateur'])) {
 
     ?>
 
-<p>
-    Merci de vous connecter pour pouvoir effectuer une réservation. <br>
-</p>
 
-<p>
-    Pour vous connecter, rendez vous ici : <a href="?page=connexion">Connexion</a>
-</p>
+<div class="jumbotron reser">
+  <h1 class="display-4">Cher Client</h1>
+  <p class="lead">Vous êtes déconnectés.</p>
+  <hr class="my-4">
+  <p>Merci de vous connecter pour pouvoir effectuer une réservation.</p>
+  <p class="lead">
+    <a class="btn btn-reser btn-lg" href="?page=connexion" role="button">Connexion</a>
+  </p>
+</div>
 
 <?php
 

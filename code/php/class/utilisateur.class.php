@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Adeline
- * Date: 23/02/2019
- * Time: 09:44
- */
 
 class utilisateur {
 

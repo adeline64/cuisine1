@@ -6,8 +6,16 @@ if (!empty($_SESSION['utilisateur'])) {
 ?>
 
 <p>
-    ATTENTION !!!! 
-    Vous êtes déja connecté
+  
+<div class="jumbotron reser">
+  <h1 class="display-4">Cher Client</h1>
+  <p class="lead">Vous êtes déja connecté</p>
+  <hr class="my-4">
+  <p></p>
+  <p class="lead">
+    <a class="btn btn-reser btn-lg" href="?page=accueil" role="button">Accueil</a>
+  </p>
+</div>
 </p>
 
 
@@ -58,17 +66,20 @@ if ( ! empty( $_POST ) ) {
 
 
 <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <div class="panel-title">FORMULAIRE D'INSCRIPTION</div>
-                        </div>  
-                        <div class="panel-body" >
-                            <form action="?page=inscription" method="post">
-                                
-                                <div id="alert_enregist" style="display:none" class="alert alert-danger">
-                                    <p>Erreur:</p>
-                                    <span></span>
-                                </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                FORMULAIRE D'INSCRIPTION
+            </div>
+        </div>  
+    <div class="panel-body" >
+        <form action="?page=inscription" method="post">
+            <div id="alert_enregist" style="display:none" class="alert alert-danger">
+                <p>
+                    Erreur:
+                </p>
+                <span></span>
+            </div>
                                 
                                 <!-- RENSEIGNEMENT -->
                                 <div class="form-group">

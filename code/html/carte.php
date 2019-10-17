@@ -9,13 +9,13 @@ ad tempus, et tria milia saltatricum ne interpellata quidem cum choris totidemqu
         </p>
 
                 <div class="menu">
-                        <a href="?page=menu" class="btn btn-primary btn-lg active Menu" role="button" aria-pressed="true">Menu du Jour</a>
+                        <a href="?page=menu" class="btn btn-carte btn-lg active Menu" role="button" aria-pressed="true">Menu du Jour</a>
                 </div>
                 <div class="carto">
-                        <br><a href="?page=carto" class="btn btn-primary btn-lg active carto" role="button" aria-pressed="true">A La Carte</a>
+                        <br><a href="?page=carto" class="btn btn-carte btn-lg active carto" role="button" aria-pressed="true">A La Carte</a>
                 </div>
                 <div class="boisson">
-                        <br><a href="?page=boisson" class="btn btn-primary btn-lg active boisson" role="button" aria-pressed="true">Carte des Boissons</a>
+                        <br><a href="?page=boisson" class="btn btn-carte btn-lg active boisson" role="button" aria-pressed="true">Carte des Boissons</a>
                 </div>
         </div>
 </div>
